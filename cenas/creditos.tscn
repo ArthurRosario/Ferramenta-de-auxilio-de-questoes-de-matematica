@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cl0tqpard1fgi"]
+
+[ext_resource type="Texture2D" uid="uid://b587u4uw4jhtr" path="res://arts/fundo_menu.png" id="1_dmlrq"]
+[ext_resource type="Script" uid="uid://dr2vg306l4jhn" path="res://scripts/creditos.gd" id="1_f7osg"]
+
+[node name="creditos" type="Control" unique_id=362353082]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f7osg")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=263231095]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dmlrq")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=843226885]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 1
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 350.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 60
+text = "Voltar"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
