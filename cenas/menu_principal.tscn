@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://serayh4doe0t"]
 
 [ext_resource type="Script" uid="uid://c7c8yfod1g12p" path="res://scripts/menu_principal.gd" id="1_405qn"]
-[ext_resource type="Texture2D" uid="uid://b587u4uw4jhtr" path="res://arts/fundo_menu.png" id="1_bllnq"]
+[ext_resource type="Texture2D" uid="uid://bbl3jg5bxivll" path="res://arts/Fundo_menu2.png" id="2_405qn"]
 
 [sub_resource type="Animation" id="Animation_405qn"]
 length = 0.001
@@ -56,7 +56,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_bllnq")
+texture = ExtResource("2_405qn")
+stretch_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=913818379]
 layout_mode = 1
@@ -103,6 +104,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = 102.0
+offset_right = -11.0
+offset_bottom = 102.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
