@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://serayh4doe0t"]
 
 [ext_resource type="Script" uid="uid://c7c8yfod1g12p" path="res://scripts/menu_principal.gd" id="1_405qn"]
-[ext_resource type="Texture2D" uid="uid://bbl3jg5bxivll" path="res://arts/Fundo_menu2.png" id="2_405qn"]
+[ext_resource type="Texture2D" uid="uid://8rxn871rtr8y" path="res://Foco Total/Tela_inicial.png" id="2_eyjon"]
+[ext_resource type="Texture2D" uid="uid://b42kllgsfgg3h" path="res://Foco Total/Botão1.png" id="3_6ro21"]
+[ext_resource type="FontFile" uid="uid://dpj1qbf5fnq76" path="res://fonts/Zen_Dots/ZenDots-Regular.ttf" id="4_0330o"]
+[ext_resource type="Texture2D" uid="uid://d4if0ci6iuc0o" path="res://Foco Total/Logo Centro Universitário META.png" id="5_sw1c2"]
+[ext_resource type="FontFile" uid="uid://bekolxepujtd5" path="res://fonts/Rubik_Glitch/RubikGlitch-Regular.ttf" id="6_6ro21"]
 
 [sub_resource type="Animation" id="Animation_405qn"]
 length = 0.001
@@ -56,8 +60,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_405qn")
-stretch_mode = 3
+texture = ExtResource("2_eyjon")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=913818379]
 layout_mode = 1
@@ -66,48 +70,124 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -251.57
+offset_top = -40.0
+offset_right = 248.42993
+offset_bottom = 470.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 30
+theme_override_constants/separation = 10
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1831801731]
-custom_minimum_size = Vector2(500, 100)
+[node name="botao_iniciar" type="TextureButton" parent="VBoxContainer" unique_id=443790231]
+custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 60
-text = "Jogar/Modos"
+texture_normal = ExtResource("3_6ro21")
+texture_pressed = ExtResource("3_6ro21")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1633731776]
-custom_minimum_size = Vector2(500, 100)
+[node name="Label" type="Label" parent="VBoxContainer/botao_iniciar" unique_id=1093536091]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_0330o")
+theme_override_font_sizes/font_size = 55
+text = "INICIAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_lock_ = true
+
+[node name="botao_creditos" type="TextureButton" parent="VBoxContainer" unique_id=76420266]
+custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 60
-text = "Créditos"
+texture_normal = ExtResource("3_6ro21")
+texture_pressed = ExtResource("3_6ro21")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=284935595]
-custom_minimum_size = Vector2(500, 100)
+[node name="Label" type="Label" parent="VBoxContainer/botao_creditos" unique_id=785071279]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_0330o")
+theme_override_font_sizes/font_size = 40
+text = "CRÉDITOS"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_lock_ = true
+
+[node name="botao_sair" type="TextureButton" parent="VBoxContainer" unique_id=879930193]
+custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 60
-text = "Sair"
+texture_normal = ExtResource("3_6ro21")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="Label" type="Label" parent="VBoxContainer/botao_sair" unique_id=619649020]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_0330o")
+theme_override_font_sizes/font_size = 55
+text = "SAIR"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_lock_ = true
+
+[node name="logo_META" type="TextureRect" parent="." unique_id=135670075]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -180.0
+offset_right = 488.0
+offset_bottom = -26.0
+grow_vertical = 0
+texture = ExtResource("5_sw1c2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="." unique_id=886298582]
+layout_mode = 0
+offset_left = 493.0
+offset_top = 159.0
+offset_right = 1432.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("6_6ro21")
+theme_override_font_sizes/font_size = 150
+text = "FOCO TOAL"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=257132503]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -11.0
-offset_top = 102.0
-offset_right = -11.0
-offset_bottom = 102.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -115,6 +195,6 @@ color = Color(0, 0, 0, 1)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1698716861]
 libraries/ = SubResource("AnimationLibrary_roq6h")
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/botao_iniciar" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/botao_creditos" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/botao_sair" to="." method="_on_button_3_pressed"]
