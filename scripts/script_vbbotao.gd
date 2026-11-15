@@ -39,7 +39,6 @@ func _on_button_down() -> void:
 	else:
 		tween.tween_property(self, "position:y", posicao_original_y + 2, 0.05)
 	
-	# Toca o som automaticamente se o botão tiver o AudioStreamPlayer configurado
 	if audio_player and audio_player.stream:
 		audio_player.play()
 
