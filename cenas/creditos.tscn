@@ -4,8 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dtmjl1er71b3y" path="res://Foco Total/tela_creditos.png" id="2_rdysq"]
 [ext_resource type="Texture2D" uid="uid://b64pxto3slom8" path="res://Foco Total/botão_voltar.png" id="3_0bxsp"]
 [ext_resource type="FontFile" uid="uid://dpj1qbf5fnq76" path="res://fonts/Zen_Dots/ZenDots-Regular.ttf" id="3_itarq"]
+[ext_resource type="Script" uid="uid://h0wnicyhhyh5" path="res://scripts/script_vbbotao.gd" id="4_hliiw"]
 [ext_resource type="Texture2D" uid="uid://d4if0ci6iuc0o" path="res://Foco Total/Logo Centro Universitário META.png" id="5_hliiw"]
 [ext_resource type="Texture2D" uid="uid://duqywgn0owiui" path="res://icon.svg" id="6_a1hbf"]
+[ext_resource type="AudioStream" uid="uid://b5pbkvjy21q8i" path="res://audio/audio_ui/click3.ogg" id="6_r2w5d"]
 
 [node name="creditos" type="Control" unique_id=362353082]
 layout_mode = 3
@@ -36,6 +38,7 @@ offset_bottom = 260.0
 texture_normal = ExtResource("3_0bxsp")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("4_hliiw")
 
 [node name="Label" type="Label" parent="Button" unique_id=1799415915]
 layout_mode = 1
@@ -51,6 +54,9 @@ text = "VOLTAR"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button" unique_id=937417696]
+stream = ExtResource("6_r2w5d")
 
 [node name="Label" type="Label" parent="." unique_id=1941929624]
 layout_mode = 0
@@ -80,5 +86,15 @@ texture = ExtResource("5_hliiw")
 [node name="Icon" type="Sprite2D" parent="." unique_id=666046637]
 position = Vector2(823, 746)
 texture = ExtResource("6_a1hbf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1051635243]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
