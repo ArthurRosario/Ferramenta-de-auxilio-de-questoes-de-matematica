@@ -1,0 +1,287 @@
+[gd_scene format=3 uid="uid://bayvbe0dei7d3"]
+
+[ext_resource type="Texture2D" uid="uid://byiv34tmtsees" path="res://Foco Total/fundo.png" id="1_68lj2"]
+[ext_resource type="Script" uid="uid://f4gfi7a8fh73" path="res://scripts/modo_enem.gd" id="1_wn81g"]
+[ext_resource type="Texture2D" uid="uid://7b4p56pjdy0" path="res://Foco Total/asset2.png" id="2_7cmv0"]
+[ext_resource type="Texture2D" uid="uid://bqd75y1nti07w" path="res://Foco Total/asset1.png" id="3_lo42s"]
+[ext_resource type="Texture2D" uid="uid://cmlbfekc6xtsp" path="res://Foco Total/asset4.png" id="4_08jcw"]
+[ext_resource type="FontFile" uid="uid://dpj1qbf5fnq76" path="res://fonts/Zen_Dots/ZenDots-Regular.ttf" id="5_fei1k"]
+[ext_resource type="Texture2D" uid="uid://bqt0trv0lch4h" path="res://Foco Total/asset3.png" id="6_7cmv0"]
+[ext_resource type="Texture2D" uid="uid://b42kllgsfgg3h" path="res://Foco Total/Botão1.png" id="7_fei1k"]
+[ext_resource type="Script" uid="uid://h0wnicyhhyh5" path="res://scripts/script_vbbotao.gd" id="8_bklk8"]
+[ext_resource type="AudioStream" uid="uid://b5pbkvjy21q8i" path="res://audio/audio_ui/click3.ogg" id="9_wn81g"]
+[ext_resource type="Texture2D" uid="uid://c7p7ck05vjwxc" path="res://Foco Total/botão3.png" id="10_bklk8"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_fei1k"]
+
+[node name="modo_enem" type="Control" unique_id=1189886011]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wn81g")
+
+[node name="fundo" type="TextureRect" parent="." unique_id=842684836]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_68lj2")
+expand_mode = 1
+
+[node name="pergunta" type="TextureRect" parent="fundo" unique_id=411927227]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7cmv0")
+expand_mode = 1
+
+[node name="escrita" type="TextureRect" parent="fundo/pergunta" unique_id=251962025]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -800.0
+offset_right = 800.0
+offset_bottom = 800.0
+grow_horizontal = 2
+texture = ExtResource("3_lo42s")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="fundo/pergunta/escrita" unique_id=445668072]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 45.0
+offset_top = 178.0
+offset_right = -45.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "(Enem 2022) Uma cozinheira produz docinhos especiais por encomenda. Usando uma receita-base de massa, ela prepara uma porção, com a qual produz 50 docinhos maciços de formato esférico, com 2 cm de diâmetro. Um cliente encomenda 150 desses docinhos, mas pede que cada um tenha formato esférico com 4 cm de diâmetro. A cozinheira pretende preparar o número exato de porções da receita-base de massa necessário para produzir os docinhos dessa encomenda.
+
+Quantas porções da receita-base de massa ela deve preparar para atender esse cliente?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="modo" type="TextureRect" parent="fundo" unique_id=1313217673]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -470.0
+offset_top = -270.0
+offset_right = 74.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_08jcw")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="fundo/modo" unique_id=991663803]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 50.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_fei1k")
+theme_override_font_sizes/font_size = 56
+text = "MODO
+ ENEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="numero_pergunta" type="TextureRect" parent="fundo" unique_id=1292802403]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 370.0
+offset_bottom = 220.0
+texture = ExtResource("6_7cmv0")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="fundo/numero_pergunta" unique_id=354645396]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_fei1k")
+theme_override_font_sizes/font_size = 35
+text = "PERGUNTA 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="boxAlternativas" type="VBoxContainer" parent="." unique_id=1948493241]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.021000002
+anchor_bottom = 0.037
+offset_left = 205.0
+offset_top = 680.0
+offset_right = 1674.68
+offset_bottom = 933.04
+
+[node name="CheckBoxA" type="CheckBox" parent="boxAlternativas" unique_id=1908922300]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0.40832946, 0.40832946, 0.40832946, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+button_group = SubResource("ButtonGroup_fei1k")
+text = "a) 2"
+
+[node name="CheckBoxB" type="CheckBox" parent="boxAlternativas" unique_id=1470316587]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0.40832946, 0.40832946, 0.40832946, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+button_group = SubResource("ButtonGroup_fei1k")
+text = "b) 3"
+
+[node name="CheckBoxC" type="CheckBox" parent="boxAlternativas" unique_id=1038126141]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0.40832946, 0.40832946, 0.40832946, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+button_group = SubResource("ButtonGroup_fei1k")
+text = "c) 6"
+
+[node name="CheckBoxD" type="CheckBox" parent="boxAlternativas" unique_id=1730615057]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0.40832946, 0.40832946, 0.40832946, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+button_group = SubResource("ButtonGroup_fei1k")
+text = "d) 12"
+
+[node name="CheckBoxE" type="CheckBox" parent="boxAlternativas" unique_id=1225908149]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0.40832946, 0.40832946, 0.40832946, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+button_group = SubResource("ButtonGroup_fei1k")
+text = "e) 24"
+
+[node name="botao_pause" type="TextureButton" parent="." unique_id=165222614]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 0
+offset_left = 1490.0
+offset_top = 20.0
+offset_right = 1890.0
+offset_bottom = 220.0
+texture_normal = ExtResource("7_fei1k")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_bklk8")
+
+[node name="Label" type="Label" parent="botao_pause" unique_id=939785743]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_fei1k")
+theme_override_font_sizes/font_size = 40
+text = "PAUSAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="botao_pause" unique_id=2041171929]
+stream = ExtResource("9_wn81g")
+
+[node name="timer" type="Label" parent="." unique_id=490626940]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 0
+offset_left = 742.0
+offset_top = 78.0
+offset_right = 1142.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_fei1k")
+theme_override_font_sizes/font_size = 40
+text = "TIMER: 10:30"
+horizontal_alignment = 1
+
+[node name="botaoConfirmar" type="TextureButton" parent="." unique_id=1074067143]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -225.0
+offset_right = 150.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = 0.2443461
+texture_normal = ExtResource("10_bklk8")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_bklk8")
+
+[node name="Label" type="Label" parent="botaoConfirmar" unique_id=343363567]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -18.217169
+offset_top = 42.67476
+offset_right = -18.217163
+offset_bottom = 42.67476
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.2443461
+theme_override_fonts/font = ExtResource("5_fei1k")
+theme_override_font_sizes/font_size = 30
+text = "CONFIRMAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="botaoConfirmar" unique_id=634489485]
+stream = ExtResource("9_wn81g")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1402957258]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

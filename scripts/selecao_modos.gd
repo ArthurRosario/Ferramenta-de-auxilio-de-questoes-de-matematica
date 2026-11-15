@@ -1,6 +1,7 @@
 extends Control
 
 const MENU_PRINCIPAL = "res://cenas/menu_principal.tscn" 
+const MODO_ENEM = "res://cenas/modo_enem.tscn"
 @onready var color = $ColorRect
 
 func _ready() -> void:
@@ -15,7 +16,7 @@ func _on_botao_normal_pressed() -> void:
 	pass # Replace with function body.
 
 func _on_botao_enem_pressed() -> void:
-	pass # Replace with function body.
+	fazer_fade_out(MODO_ENEM)
 
 func _on_botao_voltar_pressed() -> void:
 	fazer_fade_out(MENU_PRINCIPAL)
