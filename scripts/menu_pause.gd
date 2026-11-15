@@ -2,7 +2,7 @@ extends Control
 
 
 func _ready() -> void:
-	visible = true
+	visible = false
 
 func _on_btn_continuar_pressed() -> void:
 	visible = false

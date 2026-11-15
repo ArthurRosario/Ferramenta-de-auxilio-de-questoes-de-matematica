@@ -84,7 +84,6 @@ func _on_botao_confirmar_pressed() -> void:
 
 func _on_botao_pause_pressed() -> void:
 	jogo_pausado = true
-	get_tree().paused = true
 	menu_pause.visible = true
 
 func retomar_jogo() -> void:
