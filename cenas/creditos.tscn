@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://cl0tqpard1fgi"]
 
-[ext_resource type="Texture2D" uid="uid://b587u4uw4jhtr" path="res://arts/fundo_menu.png" id="1_dmlrq"]
 [ext_resource type="Script" uid="uid://dr2vg306l4jhn" path="res://scripts/creditos.gd" id="1_f7osg"]
+[ext_resource type="Texture2D" uid="uid://dtmjl1er71b3y" path="res://Foco Total/tela_creditos.png" id="2_rdysq"]
+[ext_resource type="Texture2D" uid="uid://b64pxto3slom8" path="res://Foco Total/botão_voltar.png" id="3_0bxsp"]
+[ext_resource type="FontFile" uid="uid://dpj1qbf5fnq76" path="res://fonts/Zen_Dots/ZenDots-Regular.ttf" id="3_itarq"]
+[ext_resource type="Texture2D" uid="uid://d4if0ci6iuc0o" path="res://Foco Total/Logo Centro Universitário META.png" id="5_hliiw"]
+[ext_resource type="Texture2D" uid="uid://duqywgn0owiui" path="res://icon.svg" id="6_a1hbf"]
 
 [node name="creditos" type="Control" unique_id=362353082]
 layout_mode = 3
@@ -19,17 +23,62 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_dmlrq")
+texture = ExtResource("2_rdysq")
 expand_mode = 1
 
-[node name="Button" type="Button" parent="." unique_id=843226885]
-custom_minimum_size = Vector2(300, 100)
+[node name="Button" type="TextureButton" parent="." unique_id=1745846713]
+custom_minimum_size = Vector2(300, 200)
 layout_mode = 1
-offset_left = 50.0
-offset_top = 50.0
-offset_right = 350.0
-offset_bottom = 150.0
-theme_override_font_sizes/font_size = 60
-text = "Voltar"
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 461.0
+offset_bottom = 260.0
+texture_normal = ExtResource("3_0bxsp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Button" unique_id=1799415915]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_itarq")
+theme_override_font_sizes/font_size = 61
+text = "VOLTAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1941929624]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 217.0
+offset_right = 1685.0
+offset_bottom = 667.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/paragraph_spacing = -3
+theme_override_fonts/font = ExtResource("3_itarq")
+theme_override_font_sizes/font_size = 47
+text = "CRÉDITOS:
+AARON MATHEUS DE OLIVEIRA CAVALCANTE
+ANTHONY KAUAN SILVA OLIVEIRA
+EDUARDO ASSUNÇÃO MARTINS
+KLEBER KAYKY COELHO CRUZ
+PAULO ARTHUR DO ROSÁRIO PEREIRA"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="LogoCentroUniversitárioMeta" type="Sprite2D" parent="." unique_id=313415620]
+position = Vector2(461.00003, 755)
+scale = Vector2(0.13798362, 0.13317755)
+texture = ExtResource("5_hliiw")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=666046637]
+position = Vector2(823, 746)
+texture = ExtResource("6_a1hbf")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
